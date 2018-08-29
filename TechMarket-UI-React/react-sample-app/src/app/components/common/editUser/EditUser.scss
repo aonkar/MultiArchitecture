@@ -1,0 +1,11 @@
+.EditUser {
+  label {
+    font-weight: bold;
+  }
+
+  &-form-wrapper {
+    .submit-wrapper {
+      margin-top: 50px;
+    }
+  }
+}

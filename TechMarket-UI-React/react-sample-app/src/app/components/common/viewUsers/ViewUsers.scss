@@ -1,0 +1,39 @@
+.ViewUsers {
+  .operation-btn-wrapper {
+    text-align: center;
+    button {
+      min-width: 40px;
+      width: 40px;
+      margin: auto 10px;
+
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // .pane-hScroll {
+  //   // https://codepen.io/raviroshan/pen/NXyPMZ
+
+  //   overflow: auto;
+  //   // width: 400px;
+  //   // background: green;
+
+  //   table {
+  //     border-collapse: collapse;
+  //     background: white;
+  //     // table-layout: fixed;
+  //     // width: 100%;
+
+  //     th,
+  //     td {
+  //       padding: 8px 16px;
+  //       border: 1px solid #ddd;
+  //       width: 160px;
+  //       overflow: hidden;
+  //       text-overflow: ellipsis;
+  //       white-space: nowrap;
+  //     }
+  //   }
+  // }
+}

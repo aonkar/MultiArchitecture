@@ -1,0 +1,30 @@
+@import '~stylesheets/global/mixins/responsive';
+
+
+nav {
+  background-color: $black;
+
+  .nav-link {
+    color: $white !important; // By default all the text color should be White instead of blue
+  }
+
+
+
+  .deloitte-logo {
+    // padding-bottom: 10px;
+    // padding-top: 10px;
+    width: 150px;
+  }
+
+  form {
+    #search-box {
+      font-family: Arial, FontAwesome;
+      width: 400px;
+    }
+    margin-right: 20px;
+  }
+
+  .fa {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,69 @@
+@import '~stylesheets/global/variables';
+
+.cart-page {
+  &_header {
+    color: $dove_gray;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 12px;
+    line-height: 1.41;
+    margin: 1rem auto;
+    padding: 0 1rem 0 2rem;
+    text-transform: uppercase;
+  }
+
+  &_item {
+    border-bottom: 1px solid $silver;
+    margin-top: 1rem;
+    padding: 1.5rem 0;
+
+    &-img {
+      border: 1px solid $silver;
+      border-radius: 2px;
+      padding: 5px;
+    }
+
+    &-desc {
+      h5 {
+        color: black;
+      }
+      &_remove {
+        background: $cardinal;
+        border: 0;
+        color: $white;
+        cursor: pointer;
+        min-width: auto;
+
+        .fa {
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background: $deloitte_green;
+        }
+      }
+    }
+  }
+
+  &_checkout {
+    margin-top: 20px;
+
+    &_btn {
+      background: $alabaster;
+      color: $tamarillo;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      line-height: 2;
+      margin-left: 5px;
+      padding: 8px 20px;
+      text-transform: uppercase;
+
+      &:hover {
+        background: $deloitte_green;
+        color: $white;
+      }
+    }
+  }
+}

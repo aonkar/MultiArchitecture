@@ -1,0 +1,19 @@
+{
+	"status": true,
+	"responseObject": {
+		"userId": 1,
+		"userName": "abhishek.onkar",
+		"password": null,
+		"firstname": "abhishek",
+		"lastname": "onkar1",
+		"email": "aonkar@gmail.com",
+		"mobile": "99109978790",
+		"role": "admin",
+		"jwt":
+			"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmhpc2hlay5vbmthciIsInR5cGUiOiJsb2dpblRva2VuIn0.mq9kYB7hf6NYx1NaJUNvNEOxPOkfKLfN3GY5Oh9M9EM",
+		"age": 26,
+		"category": "adult",
+		"isUserActive": null
+	},
+	"message": "valid user"
+}

@@ -1,0 +1,13 @@
+// @import '~bootstrap/scss/bootstrap';
+
+.AddUser {
+  label {
+    font-weight: bold;
+  }
+
+  &-form-wrapper {
+    .submit-wrapper {
+      margin-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: techmarket-service
+server:
+    port: 8082
+logging:
+    file: ../logs/SpringbootApp.log
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder: TRACE
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+contentType:
+  application/json
+characterEncoding:
+  UTF-8
+accessControlAllowMethods:
+  POST, GET, OPTIONS, PUT, HEAD, DELETE
+accessControlExposeHeaders:
+  X-Custom-Header,Content-Type, Accept, X-Requested-With, Authorization
+accessControlAllowHeaders:
+  Access-Control-Allow-Origin, Authorization, Origin, X-Requested-With, Content-Type, Accept
+accessControlMaxAge:
+  60000
+accessControlAllowCredentials:
+  true                  
+
+commonUser:
+  common_user
+resourceManager:
+  resource_manager
+    
+db:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/user_management?autoReconnect=true&useSSL=false
+  username: root
+  password: password
+  datasource: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+
+hibernate:
+  dialect: org.hibernate.dialect.MySQL5Dialect
+  show_sql: true
+  hbm2ddl: 
+    auto: false
+
+entitymanager:
+  packagesToScan: com.deloitte.techmarket.dto
+     
+isDBActive:
+  true
+
+ruleEngine:
+  odm

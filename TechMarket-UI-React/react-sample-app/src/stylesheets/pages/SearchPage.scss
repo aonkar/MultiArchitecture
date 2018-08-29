@@ -1,0 +1,10 @@
+@import '~stylesheets/global/variables';
+
+.search-page {
+  .result-info {
+    margin-bottom: 30px;
+    .searched-keyword {
+      font-weight: bold;
+    }
+  }
+}

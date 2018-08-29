@@ -1,0 +1,9 @@
+.main {
+	background-image: url("background.jpg");
+	display: flex;
+}
+
+body {
+	background-color: yellowgreen;
+
+}

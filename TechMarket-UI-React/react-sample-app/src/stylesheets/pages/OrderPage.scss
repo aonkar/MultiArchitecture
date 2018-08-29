@@ -1,0 +1,25 @@
+@import '~stylesheets/global/variables';
+
+.order-page {
+  padding-top: 100px;
+
+  &_details {
+    margin-top: 2rem;
+
+    &-image {
+      border: 1px solid $silver;
+      border-radius: 2px;
+      padding: 5px;
+    }
+
+    &-description {
+      &_link {
+        color: $black;
+      }
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}

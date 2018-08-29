@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title><%= htmlWebpackPlugin.options.appTitle %></title>
+
+	<!--Use jQUery CDN in Production Mode-->
+	<% if(htmlWebpackPlugin.options.isProductionMode){ %>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<% } else{ %>
+	<script type="text/javascript" src="/<%= htmlWebpackPlugin.options.publicPath %>/hosted/jquery.min.js"></script>
+	<% } %>
+
+	<script type="text/javascript" src="/<%= htmlWebpackPlugin.options.publicPath %>/hosted/toastr.min.js"></script>
+</head>
+<body>
+	<h1>Webpack Deep Dive</h1>
+	<p>Simple HTML File</p>
+
+	<div class="main">
+		Demo for publicPath
+	</div>
+
+	<button id="loadFile">
+		Load File
+	</button>
+
+	<!-- <script src="./src/index.js"></script> -->
+	<!-- <script src="./some-virtual-location/bundle.js"></script> -->
+</body>
+</html>

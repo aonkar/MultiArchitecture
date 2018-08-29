@@ -1,0 +1,25 @@
+node_modules/
+
+.env
+www-root/react-sample-app/
+extras/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.pmd
+
+#Intellij
+*.iml
+.idea/*
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+statistics.html

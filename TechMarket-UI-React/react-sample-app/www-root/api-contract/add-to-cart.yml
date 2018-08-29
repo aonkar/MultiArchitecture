@@ -1,0 +1,11 @@
+End-Point : api/add-to-cart
+Method-Type: POST
+Query-Param : NULL
+Request-Payload: {
+			quantity: <number>,
+			productId: <number>,
+			cartId: <number> || NULL
+		}
+Mock-Response: mock-json/api/add-to-cart.json
+Note: cartId will be null for the first call.
+On success response, API will provide the cartId which will be sent in all consecutive requests.

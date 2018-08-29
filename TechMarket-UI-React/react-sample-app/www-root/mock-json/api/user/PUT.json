@@ -1,0 +1,18 @@
+{
+	"status": true,
+	"responseObject": {
+		"userId": 23,
+		"userName": "raroshan",
+		"password": null,
+		"firstname": "Ravi",
+		"lastname": "Roshan",
+		"email": "Raroshan@deloitte.com",
+		"mobile": "9036415420",
+		"role": "admin",
+		"jwt": null,
+		"age": 29,
+		"category": "adult",
+		"isUserActive": null
+	},
+	"message": "updated"
+}

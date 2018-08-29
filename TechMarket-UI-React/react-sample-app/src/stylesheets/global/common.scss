@@ -1,0 +1,62 @@
+@import '~stylesheets/global/variables';
+// @import '~bootstrap/scss/bootstrap';
+
+.btn {
+  min-width: $button-min-width;
+
+  span {
+    &.glyphicon {
+      margin: 0 5px;
+    }
+  }
+}
+
+.page-title {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid $mineshaft;
+  text-align: center;
+  color: $deloitte_green;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.center-h {
+  display: flex;
+  justify-content: center;
+}
+
+.center-v {
+  display: flex;
+  align-items: center;
+}
+
+.row-eq-height {
+  display: flex;
+}
+
+.submit-wrapper {
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fa {
+      font-size: 30px;
+      padding-right: 10px;
+    }
+  }
+}
+
+// [type='submit'] {
+//   @extend .btn-outline-dark;
+// }

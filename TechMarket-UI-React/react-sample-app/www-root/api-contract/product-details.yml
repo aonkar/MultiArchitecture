@@ -1,0 +1,6 @@
+End-Point : api/product-detail/<productId>
+Method-Type: GET
+Query-Param : NULL
+Request-Payload: NULL
+Mock-Response: mock-json/api/product-detail/3.json
+Note: NULL

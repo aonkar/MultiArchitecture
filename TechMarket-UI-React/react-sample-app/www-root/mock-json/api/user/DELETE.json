@@ -1,0 +1,18 @@
+{
+	"status": true,
+	"responseObject": {
+		"userId": 25,
+		"userName": null,
+		"password": null,
+		"firstname": null,
+		"lastname": null,
+		"email": null,
+		"mobile": null,
+		"role": null,
+		"jwt": null,
+		"age": null,
+		"category": null,
+		"isUserActive": false
+	},
+	"message": "deleted"
+}

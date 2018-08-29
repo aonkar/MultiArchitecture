@@ -1,0 +1,20 @@
+.container{
+    height: 450px;
+    text-align: center;
+    margin: 5px;
+}
+
+table{
+    width: 70%;
+    text-align: left;
+}
+h2, label{
+    color: black;
+}
+
+input.ng-invalid{
+    border-left: 5px solid red;
+}
+input.ng-valid{
+    border-left: 5px solid green;
+}

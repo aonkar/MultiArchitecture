@@ -1,0 +1,22 @@
+package rules
+
+import com.deloitte.techmarket.common.model.UserVO;
+
+rule "User Student"
+	when
+		userObject: UserVO(age>11 && age<22)
+	then
+		userObject.setCategory("student");
+	end
+rule "User Regular"
+	when
+		userObject: UserVO(age>21 && age<65)
+	then
+		userObject.setCategory("adult");
+	end
+rule "User Senior"
+	when
+		userObject: UserVO(age>64)
+	then
+		userObject.setCategory("senior citizen");
+	end

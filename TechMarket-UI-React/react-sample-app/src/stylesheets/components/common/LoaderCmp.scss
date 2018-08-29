@@ -1,0 +1,23 @@
+@import '~stylesheets/global/variables';
+
+$primary-color: $deloitte_blue;
+
+@import '~loaders.css/src/animations/line-scale.scss';
+
+
+.LoaderCmp {
+  // border: 2px solid black;
+
+  .loader-hidden {
+    display: none;
+  }
+  .loader-active {
+    display: block;
+  }
+
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

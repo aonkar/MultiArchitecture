@@ -1,0 +1,54 @@
+@import '~stylesheets/global/variables';
+
+.home-page{
+  #productCarousel {
+    margin-bottom: 20px;
+    background: $black;
+    .carousel-indicators{
+      .active{
+        background: $deloitte_green;
+      }
+    }
+    .carousel-inner{
+      height: 300px;
+      @media (min-width: 767px) {
+        height: 700px;
+      }
+      .carousel-item{
+        width: 100%;
+        height: 100%;
+        .carousel-caption{
+          bottom: 10px;
+        }
+      }
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+      width:4%
+    }
+  }
+  .category-container{
+    .banner-subtitle{
+      color: $gray;
+    }
+    .category-card{
+      img{
+        background-color: $black
+      }
+      &:hover{
+        img{
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .c-deals{
+    .category-card{
+      img{
+        background-color: $dusty_gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.springboot.app</groupId>
+	<artifactId>TechMarket-App</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<jsonwebtoken.version>0.7.0</jsonwebtoken.version>
+		<swagger.version>2.2.2</swagger.version>
+		<drools.version>6.2.0.Final</drools.version>
+		<techmarket-app.version>0.0.1-SNAPSHOT</techmarket-app.version>
+		<springboot.version>1.4.3.RELEASE</springboot.version>
+		<mysql.connector.version>5.1.43</mysql.connector.version>
+		<hikaricp.version>2.7.3</hikaricp.version>
+		<java.version>1.8</java.version>
+		<powermock.version>1.7.1</powermock.version>
+		<junit.version>4.12</junit.version>
+		<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+		<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+		<sonar.language>java</sonar.language>
+		<sonar.exclusions>**/exception/*.java,**/*DTO.java,**/model/*.java, **/*Main.java, **/*Interceptor.java, **/Common*.java, **/ConfigurationClass.java
+		**/DroolsRuleEngine.java, **/RequestLoggingFilterConfig.java, **/SwaggerConfig.java
+		</sonar.exclusions>
+
+	</properties>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.3.RELEASE</version>
+	</parent>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.springboot.app</groupId>
+				<artifactId>TechMarket-Common</artifactId>
+				<version>${techmarket-app.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.springboot.app</groupId>
+				<artifactId>TechMarket-Data</artifactId>
+				<version>${techmarket-app.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.springboot.app</groupId>
+				<artifactId>TechMarket-Drools</artifactId>
+				<version>${techmarket-app.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.springboot.app</groupId>
+				<artifactId>TechMarket-Security</artifactId>
+				<version>${techmarket-app.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.springboot.app</groupId>
+				<artifactId>TechMarket-Service</artifactId>
+				<version>${techmarket-app.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-thymeleaf</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-aop</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-jersey</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-security</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- ___https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt</artifactId>
+				<version>${jsonwebtoken.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${swagger.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${swagger.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-jpa</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.connector.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.drools</groupId>
+				<artifactId>drools-core</artifactId>
+				<version>${drools.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.drools</groupId>
+				<artifactId>drools-compiler</artifactId>
+				<version>${drools.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>${hikaricp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Brixton.SR4</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.7.3</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.7.3</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-classloading-xstream -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-classloading-xstream</artifactId>
+			<version>1.7.3</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.7.3</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.7.3</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-classloading-xstream -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-classloading-xstream</artifactId>
+			<version>1.7.3</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<!-- <build> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-surefire-plugin</artifactId> <version>2.18.1</version> 
+		</plugin> <plugin> <groupId>org.jacoco</groupId> <artifactId>jacoco-maven-plugin</artifactId> 
+		<version>0.7.2.201409121644</version> <configuration> <append>true</append> 
+		</configuration> <executions> <execution> <goals> <goal>prepare-agent</goal> 
+		</goals> </execution> <execution> <id>post-unit-test</id> <phase>test</phase> 
+		<goals> <goal>report</goal> </goals> </execution> </executions> </plugin> 
+		</plugins> </build> -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.2.201409121644</version>
+				<configuration>
+					<append>true</append>
+					<!-- <excludes>
+						<exclude>**/UserVO.java</exclude>
+						<exclude>**/UserDTO.java</exclude>
+					</excludes> -->
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>post-unit-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<modules>
+		<module>Commons</module>
+		<module>Services</module>
+	</modules>
+</project>

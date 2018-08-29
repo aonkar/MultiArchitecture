@@ -1,0 +1,15 @@
+nav#mainNav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand.js-scroll-trigger(routerlink='#') Deloitte - TechMarket
+    button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto([hidden]='hideNavBarDet')
+        li.nav-item
+          a.nav-link.js-scroll-trigger(routerLink='/dashboard') Home
+        li.nav-item
+          a.nav-link.js-scroll-trigger(routerLink='/create-user') New User
+        li.nav-item
+          a.nav-link.js-scroll-trigger() Welcome, {{loggedInUser}}
+        li.nav-item((click)='logoutUser()')
+          a.nav-link.js-scroll-trigger() Logout          

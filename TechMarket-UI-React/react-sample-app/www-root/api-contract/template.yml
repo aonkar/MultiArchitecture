@@ -1,0 +1,6 @@
+End-Point : api/search-result/<anySearchTerm>
+Method-Type: GET
+Query-Param : NULL
+Request-Payload: NULL
+Mock-Response: /mock-json/api/search-result/anySearchTerm.json
+Note:

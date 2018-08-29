@@ -1,0 +1,6 @@
+End-Point : api/cart-page/<cartId>
+Method-Type: GET
+Query-Param : NULL
+Request-Payload: NULL
+Mock-Response: mock-json/api/cart-page.json
+Note: NULL
